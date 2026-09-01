@@ -11,6 +11,7 @@ import {
   updateQuantity,
 } from "../features/cart/cartSlice";
 import getColorName from "../components/utils/getColorName";
+import { toast } from "react-hot-toast";
 
 function CartPage() {
   const dispatch = useAppDispatch();
@@ -67,6 +68,7 @@ function CartPage() {
         selectedSize: item.selectedSize,
       })
     );
+    toast.error(`${item.product.name} removed from cart`);
   };
 
   return (
@@ -112,7 +114,7 @@ function CartPage() {
               </p>
 
               <Link
-                to="/products"
+                to="/category/all"
                 className="mt-4 inline-block rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-black/90"
               >
                 Continue Shopping

@@ -5,6 +5,7 @@ import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import type { Product } from "../../data/products";
 import { useAppDispatch } from "../../app/hooks";
 import { addToCart } from "../../features/cart/cartSlice";
+import toast from "react-hot-toast";
 
 interface ProductInfoProps {
   product: Product;
@@ -75,6 +76,7 @@ function ProductInfo({ product }: ProductInfoProps) {
         quantity,
       })
     );
+    toast.success(`${product.name} added to cart`);
   };
 
   return (
