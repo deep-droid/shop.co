@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
-import { FaSliders, FaXmark, FaCheck } from "react-icons/fa6";
+import { FaXmark, FaCheck } from "react-icons/fa6";
 import { FilterSection } from "./FilterSection";
 
 const MIN_PRICE = 50;
 const MAX_PRICE = 500;
 
 interface ProductListingFiltersProps {
-  filtersOpen: boolean;
-  setFiltersOpen: React.Dispatch<React.SetStateAction<boolean>>;
 
   // New: specifically for mobile drawer
   mobileFiltersOpen: boolean;
@@ -29,8 +27,6 @@ interface ProductListingFiltersProps {
 }
 
 export function ProductListingFilters({
-  filtersOpen,
-  setFiltersOpen,
   mobileFiltersOpen,
   setMobileFiltersOpen,
   categories,

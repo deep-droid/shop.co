@@ -1,6 +1,5 @@
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { FaSliders } from "react-icons/fa6";
 
 import { products } from "../data/products";
 
@@ -32,7 +31,6 @@ export default function ProductListingPage() {
   });
   const [selectedDressStyle, setSelectedDressStyle] = useState("");
 
-  const [filtersOpen, setFiltersOpen] = useState(true);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   const categories = useMemo(
@@ -182,8 +180,6 @@ export default function ProductListingPage() {
           className={`${mobileFiltersOpen ? "block" : "hidden"} lg:block`}
         >
           <ProductListingFilters
-            filtersOpen={filtersOpen}
-            setFiltersOpen={setFiltersOpen}
             mobileFiltersOpen={mobileFiltersOpen}
             setMobileFiltersOpen={setMobileFiltersOpen}
             categories={categories}
