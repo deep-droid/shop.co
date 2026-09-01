@@ -1,0 +1,1422 @@
+[
+  {
+    "id": 1,
+    "name": "T-shirt with Tape Details",
+    "slug": "t-shirt-with-tape-details",
+    "category": "T-shirts",
+    "gender": "Men",
+    "price": 120,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 4.5,
+    "reviewCount": 124,
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Green",
+        "value": "#4A5D23"
+      },
+      {
+        "name": "Black",
+        "value": "#000000"
+      },
+      {
+        "name": "White",
+        "value": "#FFFFFF"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A stylish everyday t-shirt featuring contrasting tape details. Made from soft and breathable fabric for comfortable all-day wear.",
+    "tags": [
+      "casual",
+      "t-shirt",
+      "men"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Skinny Fit Jeans",
+    "slug": "skinny-fit-jeans",
+    "category": "Jeans",
+    "gender": "Men",
+    "price": 240,
+    "oldPrice": 260,
+    "discount": 20,
+    "rating": 3.5,
+    "reviewCount": 87,
+    "images": [
+      "https://images.unsplash.com/photo-1542272604-787c3835535d?w=800",
+      "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Blue",
+        "value": "#263C63"
+      },
+      {
+        "name": "Black",
+        "value": "#171717"
+      }
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "description": "Modern skinny fit jeans designed with comfortable stretch fabric and a clean finish.",
+    "tags": [
+      "jeans",
+      "denim",
+      "men"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Checkered Shirt",
+    "slug": "checkered-shirt",
+    "category": "Shirts",
+    "gender": "Men",
+    "price": 180,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 4.5,
+    "reviewCount": 96,
+    "images": [
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800",
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Red",
+        "value": "#8B1E1E"
+      },
+      {
+        "name": "White",
+        "value": "#FFFFFF"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A classic checkered shirt with a relaxed silhouette that works perfectly for casual everyday outfits.",
+    "tags": [
+      "shirt",
+      "checkered",
+      "casual"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Sleeve Striped T-Shirt",
+    "slug": "sleeve-striped-t-shirt",
+    "category": "T-shirts",
+    "gender": "Men",
+    "price": 130,
+    "oldPrice": 160,
+    "discount": 30,
+    "rating": 4.5,
+    "reviewCount": 153,
+    "images": [
+      "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800",
+      "https://images.unsplash.com/photo-1583743814966-8936f37f4678?w=800"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "value": "#FFFFFF"
+      },
+      {
+        "name": "Navy",
+        "value": "#172554"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A clean striped t-shirt with contrast sleeve details and a comfortable regular fit.",
+    "tags": [
+      "t-shirt",
+      "striped",
+      "casual"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Vertical Striped Shirt",
+    "slug": "vertical-striped-shirt",
+    "category": "Shirts",
+    "gender": "Men",
+    "price": 212,
+    "oldPrice": 242,
+    "discount": 20,
+    "rating": 5,
+    "reviewCount": 112,
+    "images": [
+      "https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?w=800",
+      "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Green",
+        "value": "#50644A"
+      },
+      {
+        "name": "White",
+        "value": "#FFFFFF"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A sophisticated vertical striped shirt designed for a polished yet relaxed look.",
+    "tags": [
+      "shirt",
+      "striped",
+      "formal"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Courage Graphic T-Shirt",
+    "slug": "courage-graphic-t-shirt",
+    "category": "T-shirts",
+    "gender": "Men",
+    "price": 145,
+    "oldPrice": 170,
+    "discount": 15,
+    "rating": 4,
+    "reviewCount": 74,
+    "images": [
+      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800",
+      "https://images.unsplash.com/photo-1583743814966-8936f37f4678?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "value": "#000000"
+      },
+      {
+        "name": "White",
+        "value": "#FFFFFF"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A bold graphic t-shirt designed to add personality to your everyday wardrobe.",
+    "tags": [
+      "graphic",
+      "t-shirt",
+      "casual"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Loose Fit Bermuda Shorts",
+    "slug": "loose-fit-bermuda-shorts",
+    "category": "Shorts",
+    "gender": "Men",
+    "price": 80,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 3,
+    "reviewCount": 42,
+    "images": [
+      "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=800",
+      "https://images.unsplash.com/photo-1565084888279-aca607ecce0c?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Brown",
+        "value": "#6B4F3A"
+      },
+      {
+        "name": "Black",
+        "value": "#000000"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "Relaxed-fit Bermuda shorts designed for comfort and easy summer styling.",
+    "tags": [
+      "shorts",
+      "summer",
+      "casual"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "One Life Graphic T-Shirt",
+    "slug": "one-life-graphic-t-shirt",
+    "category": "T-shirts",
+    "gender": "Men",
+    "price": 260,
+    "oldPrice": 300,
+    "discount": 40,
+    "rating": 4.5,
+    "reviewCount": 451,
+    "images": [
+      "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=800",
+      "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800",
+      "https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Olive",
+        "value": "#4B4B36"
+      },
+      {
+        "name": "Dark Green",
+        "value": "#294C48"
+      },
+      {
+        "name": "Navy",
+        "value": "#2E3150"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "Express your personality with this premium graphic t-shirt. Crafted from soft breathable cotton with a comfortable regular fit.",
+    "tags": [
+      "graphic",
+      "t-shirt",
+      "casual",
+      "featured"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Classic Denim Jacket",
+    "slug": "classic-denim-jacket",
+    "category": "Jackets",
+    "gender": "Men",
+    "price": 210,
+    "oldPrice": 250,
+    "discount": 16,
+    "rating": 4.5,
+    "reviewCount": 91,
+    "images": [
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800",
+      "https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Blue",
+        "value": "#315477"
+      },
+      {
+        "name": "Black",
+        "value": "#181818"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A timeless denim jacket with a versatile design that works across seasons.",
+    "tags": [
+      "jacket",
+      "denim",
+      "casual"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Premium Cotton Hoodie",
+    "slug": "premium-cotton-hoodie",
+    "category": "Hoodies",
+    "gender": "Men",
+    "price": 190,
+    "oldPrice": 220,
+    "discount": 14,
+    "rating": 4,
+    "reviewCount": 138,
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Gray",
+        "value": "#808080"
+      },
+      {
+        "name": "Black",
+        "value": "#000000"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A premium cotton hoodie with a soft interior and relaxed fit for everyday comfort.",
+    "tags": [
+      "hoodie",
+      "casual",
+      "cotton"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Relaxed Fit Chinos",
+    "slug": "relaxed-fit-chinos",
+    "category": "Trousers",
+    "gender": "Men",
+    "price": 175,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 4.5,
+    "reviewCount": 63,
+    "images": [
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Beige",
+        "value": "#C5B49A"
+      },
+      {
+        "name": "Navy",
+        "value": "#1E293B"
+      }
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "description": "Comfortable relaxed-fit chinos that can easily transition from casual to smart-casual outfits.",
+    "tags": [
+      "trousers",
+      "chinos",
+      "casual"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Oversized Streetwear T-Shirt",
+    "slug": "oversized-streetwear-t-shirt",
+    "category": "T-shirts",
+    "gender": "Men",
+    "price": 110,
+    "oldPrice": 140,
+    "discount": 21,
+    "rating": 4,
+    "reviewCount": 118,
+    "images": [
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800",
+      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "value": "#000000"
+      },
+      {
+        "name": "Gray",
+        "value": "#71717A"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "An oversized streetwear t-shirt with a relaxed silhouette and contemporary styling.",
+    "tags": [
+      "streetwear",
+      "oversized",
+      "t-shirt"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Casual Linen Shirt",
+    "slug": "casual-linen-shirt",
+    "category": "Shirts",
+    "gender": "Men",
+    "price": 155,
+    "oldPrice": 180,
+    "discount": 14,
+    "rating": 4.5,
+    "reviewCount": 82,
+    "images": [
+      "https://images.unsplash.com/photo-1602810316498-9c42a3f8f3a3?w=800",
+      "https://images.unsplash.com/photo-1603252109303-2751441dd157?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "value": "#F1E8D8"
+      },
+      {
+        "name": "Sky Blue",
+        "value": "#87B5D6"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A lightweight linen shirt designed for warm days and effortless casual styling.",
+    "tags": [
+      "linen",
+      "shirt",
+      "summer"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Classic Bomber Jacket",
+    "slug": "classic-bomber-jacket",
+    "category": "Jackets",
+    "gender": "Men",
+    "price": 280,
+    "oldPrice": 320,
+    "discount": 12,
+    "rating": 4.5,
+    "reviewCount": 105,
+    "images": [
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800",
+      "https://images.unsplash.com/photo-1527010154944-f2242e08f55e?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "value": "#000000"
+      },
+      {
+        "name": "Green",
+        "value": "#374B36"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A classic bomber jacket with a modern silhouette and versatile everyday appeal.",
+    "tags": [
+      "jacket",
+      "bomber",
+      "streetwear"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Relaxed Summer Dress",
+    "slug": "relaxed-summer-dress",
+    "category": "Dresses",
+    "gender": "Women",
+    "price": 195,
+    "oldPrice": 230,
+    "discount": 15,
+    "rating": 4.5,
+    "reviewCount": 76,
+    "images": [
+      "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800",
+      "https://images.unsplash.com/photo-1612336307429-8a898d10e223?w=800"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "value": "#FFFFFF"
+      },
+      {
+        "name": "Pink",
+        "value": "#E8A0A8"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "description": "A lightweight summer dress with a relaxed silhouette and elegant everyday styling.",
+    "tags": [
+      "dress",
+      "summer",
+      "women"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Classic Oversized T-Shirt",
+    "slug": "classic-oversized-t-shirt",
+    "category": "T-Shirts",
+    "gender": "Men",
+    "price": 120,
+    "oldPrice": 150,
+    "discount": 20,
+    "rating": 4.5,
+    "reviewCount": 128,
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=800"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "value": "#FFFFFF"
+      },
+      {
+        "name": "Black",
+        "value": "#000000"
+      },
+      {
+        "name": "Navy",
+        "value": "#1F2A44"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A relaxed oversized t-shirt crafted from soft cotton with a clean everyday silhouette.",
+    "tags": [
+      "t-shirt",
+      "oversized",
+      "casual",
+      "men"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Slim Fit Denim Jacket",
+    "slug": "slim-fit-denim-jacket",
+    "category": "Jackets",
+    "gender": "Men",
+    "price": 240,
+    "oldPrice": 290,
+    "discount": 17,
+    "rating": 4.7,
+    "reviewCount": 94,
+    "images": [
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800",
+      "https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Blue",
+        "value": "#4169A1"
+      },
+      {
+        "name": "Dark Blue",
+        "value": "#172A46"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A timeless denim jacket featuring a slim fit, durable construction, and versatile everyday styling.",
+    "tags": [
+      "jacket",
+      "denim",
+      "casual",
+      "men"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Premium Cotton Hoodie",
+    "slug": "premium-cotton-hoodie",
+    "category": "Hoodies",
+    "gender": "Men",
+    "price": 180,
+    "oldPrice": 220,
+    "discount": 18,
+    "rating": 4.6,
+    "reviewCount": 156,
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800",
+      "https://images.unsplash.com/photo-1578681994506-b8f463449011?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "value": "#111111"
+      },
+      {
+        "name": "Grey",
+        "value": "#9B9B9B"
+      },
+      {
+        "name": "Cream",
+        "value": "#E8E1D5"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A heavyweight cotton hoodie designed for everyday comfort with a soft interior and relaxed fit.",
+    "tags": [
+      "hoodie",
+      "cotton",
+      "casual",
+      "men"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Relaxed Linen Shirt",
+    "slug": "relaxed-linen-shirt",
+    "category": "Shirts",
+    "gender": "Men",
+    "price": 165,
+    "oldPrice": 195,
+    "discount": 15,
+    "rating": 4.4,
+    "reviewCount": 83,
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800",
+      "https://images.unsplash.com/photo-1603252109303-2751441dd157?w=800"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "value": "#FFFFFF"
+      },
+      {
+        "name": "Beige",
+        "value": "#D8C3A5"
+      },
+      {
+        "name": "Olive",
+        "value": "#69735A"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A breathable linen shirt with a relaxed silhouette, perfect for warm days and effortless styling.",
+    "tags": [
+      "shirt",
+      "linen",
+      "summer",
+      "men"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Straight Leg Cargo Pants",
+    "slug": "straight-leg-cargo-pants",
+    "category": "Pants",
+    "gender": "Men",
+    "price": 175,
+    "oldPrice": 210,
+    "discount": 17,
+    "rating": 4.5,
+    "reviewCount": 117,
+    "images": [
+      "https://images.unsplash.com/photo-1517457210348-703079e57d4b?w=800",
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Khaki",
+        "value": "#B5A27A"
+      },
+      {
+        "name": "Black",
+        "value": "#171717"
+      },
+      {
+        "name": "Olive",
+        "value": "#59634B"
+      }
+    ],
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "description": "Functional straight-leg cargo pants with multiple pockets and a comfortable everyday fit.",
+    "tags": [
+      "pants",
+      "cargo",
+      "streetwear",
+      "men"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Minimal Knit Sweater",
+    "slug": "minimal-knit-sweater",
+    "category": "Sweaters",
+    "gender": "Women",
+    "price": 210,
+    "oldPrice": 250,
+    "discount": 16,
+    "rating": 4.8,
+    "reviewCount": 142,
+    "images": [
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800",
+      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "value": "#E8DFD0"
+      },
+      {
+        "name": "Brown",
+        "value": "#8B6F5A"
+      },
+      {
+        "name": "Black",
+        "value": "#111111"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "description": "A soft knitted sweater with a minimalist silhouette and versatile neutral color palette.",
+    "tags": [
+      "sweater",
+      "knit",
+      "minimal",
+      "women"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Flowy Midi Skirt",
+    "slug": "flowy-midi-skirt",
+    "category": "Skirts",
+    "gender": "Women",
+    "price": 145,
+    "oldPrice": 175,
+    "discount": 17,
+    "rating": 4.5,
+    "reviewCount": 68,
+    "images": [
+      "https://images.unsplash.com/photo-1583496661160-fb5886a13d77?w=800",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "value": "#111111"
+      },
+      {
+        "name": "Beige",
+        "value": "#D8C8B8"
+      },
+      {
+        "name": "Pink",
+        "value": "#D99AA2"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "description": "A lightweight midi skirt with a graceful flow and comfortable elastic waistband for everyday wear.",
+    "tags": [
+      "skirt",
+      "midi",
+      "casual",
+      "women"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Essential Ribbed Top",
+    "slug": "essential-ribbed-top",
+    "category": "Tops",
+    "gender": "Women",
+    "price": 95,
+    "oldPrice": 120,
+    "discount": 21,
+    "rating": 4.3,
+    "reviewCount": 91,
+    "images": [
+      "https://images.unsplash.com/photo-1564257577054-3e5cee6b5a7a?w=800",
+      "https://images.unsplash.com/photo-1506629905607-d9d0f3a6a6a7?w=800"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "value": "#FFFFFF"
+      },
+      {
+        "name": "Black",
+        "value": "#111111"
+      },
+      {
+        "name": "Brown",
+        "value": "#8A6754"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "description": "A fitted ribbed top designed as an effortless everyday essential for layering or wearing alone.",
+    "tags": [
+      "top",
+      "ribbed",
+      "basic",
+      "women"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Classic Trench Coat",
+    "slug": "classic-trench-coat",
+    "category": "Coats",
+    "gender": "Women",
+    "price": 320,
+    "oldPrice": 390,
+    "discount": 18,
+    "rating": 4.9,
+    "reviewCount": 205,
+    "images": [
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800",
+      "https://images.unsplash.com/photo-1548624313-0396c75ce0b1?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Beige",
+        "value": "#C8B394"
+      },
+      {
+        "name": "Black",
+        "value": "#111111"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A sophisticated trench coat with a classic silhouette, adjustable waist, and timeless styling.",
+    "tags": [
+      "coat",
+      "trench",
+      "classic",
+      "women"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Urban Relaxed Joggers",
+    "slug": "urban-relaxed-joggers",
+    "category": "Joggers",
+    "gender": "Unisex",
+    "price": 135,
+    "oldPrice": 165,
+    "discount": 18,
+    "rating": 4.6,
+    "reviewCount": 174,
+    "images": [
+      "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=800",
+      "https://images.unsplash.com/photo-1580906855289-6c4b1f6e3e0d?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Grey",
+        "value": "#8A8A8A"
+      },
+      {
+        "name": "Black",
+        "value": "#111111"
+      },
+      {
+        "name": "Navy",
+        "value": "#27344D"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "Comfortable relaxed joggers with a clean urban aesthetic, elastic waistband, and tapered leg.",
+    "tags": [
+      "joggers",
+      "streetwear",
+      "casual",
+      "unisex"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Classic Leather Sneakers",
+    "slug": "classic-leather-sneakers",
+    "category": "Shoes",
+    "gender": "Unisex",
+    "price": 225,
+    "oldPrice": 280,
+    "discount": 20,
+    "rating": 4.7,
+    "reviewCount": 189,
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "value": "#FFFFFF"
+      },
+      {
+        "name": "Black",
+        "value": "#111111"
+      }
+    ],
+    "sizes": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "description": "Clean leather sneakers with a timeless low-top profile and cushioned sole for everyday comfort.",
+    "tags": [
+      "shoes",
+      "sneakers",
+      "leather",
+      "unisex"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Everyday Canvas Sneakers",
+    "slug": "everyday-canvas-sneakers",
+    "category": "Shoes",
+    "gender": "Women",
+    "price": 155,
+    "oldPrice": 185,
+    "discount": 16,
+    "rating": 4.4,
+    "reviewCount": 73,
+    "images": [
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=800",
+      "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "value": "#EDE6D8"
+      },
+      {
+        "name": "Black",
+        "value": "#111111"
+      },
+      {
+        "name": "Green",
+        "value": "#526B58"
+      }
+    ],
+    "sizes": [
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "description": "Lightweight canvas sneakers designed for casual days with a comfortable flexible sole.",
+    "tags": [
+      "sneakers",
+      "canvas",
+      "casual",
+      "women"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Structured Shoulder Bag",
+    "slug": "structured-shoulder-bag",
+    "category": "Bags",
+    "gender": "Women",
+    "price": 195,
+    "oldPrice": 240,
+    "discount": 19,
+    "rating": 4.8,
+    "reviewCount": 116,
+    "images": [
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800",
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "value": "#111111"
+      },
+      {
+        "name": "Brown",
+        "value": "#704B3A"
+      },
+      {
+        "name": "Cream",
+        "value": "#DCCDBB"
+      }
+    ],
+    "sizes": [
+      "One Size"
+    ],
+    "description": "A structured shoulder bag with a refined shape and enough room for everyday essentials.",
+    "tags": [
+      "bag",
+      "shoulder-bag",
+      "accessories",
+      "women"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Minimal Crossbody Bag",
+    "slug": "minimal-crossbody-bag",
+    "category": "Bags",
+    "gender": "Unisex",
+    "price": 125,
+    "oldPrice": 155,
+    "discount": 19,
+    "rating": 4.5,
+    "reviewCount": 87,
+    "images": [
+      "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=800",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "value": "#111111"
+      },
+      {
+        "name": "Brown",
+        "value": "#765443"
+      }
+    ],
+    "sizes": [
+      "One Size"
+    ],
+    "description": "A compact crossbody bag with a clean minimalist design and adjustable shoulder strap.",
+    "tags": [
+      "bag",
+      "crossbody",
+      "minimal",
+      "unisex"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Premium Wool Coat",
+    "slug": "premium-wool-coat",
+    "category": "Coats",
+    "gender": "Men",
+    "price": 350,
+    "oldPrice": 420,
+    "discount": 17,
+    "rating": 4.8,
+    "reviewCount": 132,
+    "images": [
+      "https://images.unsplash.com/photo-1539533018447-63fcce2678e2?w=800",
+      "https://images.unsplash.com/photo-1548883354-7622d03aca27?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Charcoal",
+        "value": "#3D3D3D"
+      },
+      {
+        "name": "Camel",
+        "value": "#B58A62"
+      },
+      {
+        "name": "Black",
+        "value": "#111111"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A premium wool coat with a structured silhouette designed for sophisticated cold-weather styling.",
+    "tags": [
+      "coat",
+      "wool",
+      "winter",
+      "men"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Essential Polo Shirt",
+    "slug": "essential-polo-shirt",
+    "category": "Polo Shirts",
+    "gender": "Men",
+    "price": 130,
+    "oldPrice": 160,
+    "discount": 19,
+    "rating": 4.4,
+    "reviewCount": 104,
+    "images": [
+      "https://images.unsplash.com/photo-1625910513413-5fc45d4d4d22?w=800",
+      "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=800"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "value": "#FFFFFF"
+      },
+      {
+        "name": "Navy",
+        "value": "#243653"
+      },
+      {
+        "name": "Green",
+        "value": "#405D4A"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A classic polo shirt made from breathable cotton with a refined fit for casual and smart-casual outfits.",
+    "tags": [
+      "polo",
+      "cotton",
+      "casual",
+      "men"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Soft Lounge Set",
+    "slug": "soft-lounge-set",
+    "category": "Loungewear",
+    "gender": "Women",
+    "price": 190,
+    "oldPrice": 230,
+    "discount": 17,
+    "rating": 4.7,
+    "reviewCount": 149,
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "value": "#E8DFD0"
+      },
+      {
+        "name": "Grey",
+        "value": "#A1A1A1"
+      },
+      {
+        "name": "Pink",
+        "value": "#D8A1A7"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "description": "A soft matching lounge set designed for relaxed days with an effortlessly polished look.",
+    "tags": [
+      "loungewear",
+      "set",
+      "comfortable",
+      "women"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Relaxed Linen Shorts",
+    "slug": "relaxed-linen-shorts",
+    "category": "Shorts",
+    "gender": "Men",
+    "price": 110,
+    "oldPrice": 140,
+    "discount": 21,
+    "rating": 4.3,
+    "reviewCount": 62,
+    "images": [
+      "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=800",
+      "https://images.unsplash.com/photo-1565084888279-aca607ecce0c?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Beige",
+        "value": "#D5C2A6"
+      },
+      {
+        "name": "Olive",
+        "value": "#66705A"
+      },
+      {
+        "name": "Black",
+        "value": "#111111"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "Lightweight linen shorts with a relaxed fit and elastic waistband for effortless summer comfort.",
+    "tags": [
+      "shorts",
+      "linen",
+      "summer",
+      "men"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Elegant Satin Blouse",
+    "slug": "elegant-satin-blouse",
+    "category": "Blouses",
+    "gender": "Women",
+    "price": 175,
+    "oldPrice": 215,
+    "discount": 19,
+    "rating": 4.6,
+    "reviewCount": 98,
+    "images": [
+      "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800",
+      "https://images.unsplash.com/photo-1566206091558-7f218b696731?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Champagne",
+        "value": "#E8D7C2"
+      },
+      {
+        "name": "Black",
+        "value": "#111111"
+      },
+      {
+        "name": "Rose",
+        "value": "#C88D91"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "description": "An elegant satin blouse with a soft drape and polished finish, ideal for elevated everyday outfits.",
+    "tags": [
+      "blouse",
+      "satin",
+      "elegant",
+      "women"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Vintage Graphic Sweatshirt",
+    "slug": "vintage-graphic-sweatshirt",
+    "category": "Sweatshirts",
+    "gender": "Unisex",
+    "price": 155,
+    "oldPrice": 190,
+    "discount": 18,
+    "rating": 4.5,
+    "reviewCount": 121,
+    "images": [
+      "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800",
+      "https://images.unsplash.com/photo-1606702123022-7b2e9f9d8b8e?w=800"
+    ],
+    "colors": [
+      {
+        "name": "Grey",
+        "value": "#8C8C8C"
+      },
+      {
+        "name": "Black",
+        "value": "#111111"
+      },
+      {
+        "name": "Cream",
+        "value": "#E6DDCE"
+      }
+    ],
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large",
+      "X-Large"
+    ],
+    "description": "A vintage-inspired graphic sweatshirt with a relaxed fit and soft brushed interior.",
+    "tags": [
+      "sweatshirt",
+      "graphic",
+      "vintage",
+      "unisex"
+    ]
+  }
+]

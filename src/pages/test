@@ -1,0 +1,659 @@
+import { useMemo, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import {
+  FaChevronDown,
+  FaChevronUp,
+  FaSliders,
+} from "react-icons/fa6";
+
+import ProductCard from "../components/product/ProductCard";
+import type { Product } from "../data/products";
+import { products } from "../data/products";
+
+console.log("products in listing:", products, Array.isArray(products));
+
+const PRODUCTS_PER_PAGE = 9;
+
+// Compute global min/max price from data once
+const MIN_PRICE = Math.min(...products.map((p) => p.price));
+const MAX_PRICE = Math.max(...products.map((p) => p.price));
+
+function ProductListingPage() {
+  const { category } = useParams();
+
+  const categoryName = category
+    ? category.charAt(0).toUpperCase() + category.slice(1)
+    : "All Products";
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [sortBy, setSortBy] = useState("popular");
+
+  // Filters (applied when user clicks "Apply Filter")
+  const [appliedColors, setAppliedColors] = useState<string[]>([]);
+  const [appliedSizes, setAppliedSizes] = useState<string[]>([]);
+  const [appliedPriceRange, setAppliedPriceRange] = useState({
+    min: MIN_PRICE,
+    max: MAX_PRICE,
+  });
+  const [appliedDressStyle, setAppliedDressStyle] = useState("");
+
+  // Local (pending) filter state
+  const [pendingColors, setPendingColors] = useState<string[]>([]);
+  const [pendingSizes, setPendingSizes] = useState<string[]>([]);
+  const [pendingPriceRange, setPendingPriceRange] = useState({
+    min: MIN_PRICE,
+    max: MAX_PRICE,
+  });
+  const [pendingDressStyle, setPendingDressStyle] = useState("");
+
+  const [filtersOpen, setFiltersOpen] = useState(true);
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+
+  // Derive categories dynamically
+  const categories = useMemo(
+    () =>
+      Array.from(new Set(products.map((p) => p.category))).sort(),
+    []
+  );
+
+  // Apply filters button
+  const handleApplyFilters = () => {
+    setAppliedColors(pendingColors);
+    setAppliedSizes(pendingSizes);
+    setAppliedPriceRange(pendingPriceRange);
+    setAppliedDressStyle(pendingDressStyle);
+    setCurrentPage(1);
+  };
+
+  // Clear all filters
+  const handleClearFilters = () => {
+    setPendingColors([]);
+    setPendingSizes([]);
+    setPendingPriceRange({ min: MIN_PRICE, max: MAX_PRICE });
+    setPendingDressStyle("");
+
+    setAppliedColors([]);
+    setAppliedSizes([]);
+    setAppliedPriceRange({ min: MIN_PRICE, max: MAX_PRICE });
+    setAppliedDressStyle("");
+
+    setCurrentPage(1);
+  };
+
+  // const filteredProducts = useMemo(() => {
+  //   let result = [...products];
+
+  //   // Category from URL
+  //   if (category) {
+  //     result = result.filter(
+  //       (product) =>
+  //         product.category.toLowerCase() === category.toLowerCase()
+  //     );
+  //   }
+
+  //   // Price
+  //   result = result.filter(
+  //     (product) =>
+  //       product.price >= appliedPriceRange.min &&
+  //       product.price <= appliedPriceRange.max
+  //   );
+
+  //   // Colors
+  //   if (appliedColors.length > 0) {
+  //     result = result.filter((product) =>
+  //       product.colors.some((color) =>
+  //         appliedColors.includes(color.value)
+  //       )
+  //     );
+  //   }
+
+  //   // Sizes
+  //   if (appliedSizes.length > 0) {
+  //     result = result.filter((product) =>
+  //       product.sizes.some((size) => appliedSizes.includes(size))
+  //     );
+  //   }
+
+  //   // Dress style (extra category filter)
+  //   if (appliedDressStyle) {
+  //     result = result.filter(
+  //       (product) =>
+  //         product.category.toLowerCase() ===
+  //         appliedDressStyle.toLowerCase()
+  //     );
+  //   }
+
+  //   // Sorting
+  //   if (sortBy === "price-low") {
+  //     result.sort((a, b) => a.price - b.price);
+  //   } else if (sortBy === "price-high") {
+  //     result.sort((a, b) => b.price - a.price);
+  //   } else if (sortBy === "rating") {
+  //     result.sort((a, b) => b.rating - a.rating);
+  //   }
+
+  //   return result;
+  // }, [
+  //   category,
+  //   appliedPriceRange,
+  //   appliedColors,
+  //   appliedSizes,
+  //   appliedDressStyle,
+  //   sortBy,
+  // ]);
+
+  const filteredProducts = useMemo(() => {
+    return products; // show everything
+  }, []);
+
+  // Pagination
+  const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
+  const startIndex = (currentPage - 1) * PRODUCTS_PER_PAGE;
+  const visibleProducts = filteredProducts.slice(
+    startIndex,
+    startIndex + PRODUCTS_PER_PAGE
+  );
+
+  const shownStart = filteredProducts.length === 0 ? 0 : startIndex + 1;
+  const shownEnd = Math.min(startIndex + PRODUCTS_PER_PAGE, filteredProducts.length);
+
+  return (
+    <main className="container-shop px-4 py-6 sm:px-6 md:px-8 lg:py-8">
+      {/* Breadcrumb */}
+      <nav
+        aria-label="Breadcrumb"
+        className="mb-5 flex items-center gap-2 font-satoshi text-sm text-black/50"
+      >
+        <Link to="/" className="transition hover:text-black">
+          Home
+        </Link>
+        <span className="text-black/30">›</span>
+        <span className="text-black">{categoryName}</span>
+      </nav>
+
+      {/* Mobile Heading */}
+      <div className="flex items-center justify-between lg:hidden">
+        <div className="flex items-center gap-3">
+          <h1 className="heading-shop text-2xl font-black">
+            {categoryName}
+          </h1>
+          <span className="font-satoshi text-xs text-black/50">
+            Showing {shownStart}-{shownEnd} of {filteredProducts.length} Products
+          </span>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F0F0F0]"
+          aria-label="Open filters"
+        >
+          <FaSliders size={15} />
+        </button>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-[295px_minmax(0,1fr)] lg:gap-6">
+        {/* Filter Sidebar */}
+        <aside
+          className={`
+            ${mobileFiltersOpen ? "block" : "hidden"}
+            lg:block
+          `}
+        >
+          <FilterSidebar
+            filtersOpen={filtersOpen}
+            setFiltersOpen={setFiltersOpen}
+            categories={categories}
+            pendingColors={pendingColors}
+            pendingSizes={pendingSizes}
+            pendingDressStyle={pendingDressStyle}
+            pendingPriceRange={pendingPriceRange}
+            setPendingPriceRange={setPendingPriceRange}
+            setPendingColors={setPendingColors}
+            setPendingSizes={setPendingSizes}
+            setPendingDressStyle={setPendingDressStyle}
+            onApply={handleApplyFilters}
+            onClear={handleClearFilters}
+          />
+        </aside>
+
+        {/* Products */}
+        <section>
+          {/* Desktop Header */}
+          <div className="mb-5 hidden items-center justify-between lg:flex">
+            <div className="flex items-center gap-3">
+              <h1 className="heading-shop text-3xl font-black">
+                {categoryName}
+              </h1>
+
+            </div>
+
+            {/* Sort */}
+            <div className="flex items-center gap-2 text-sm">
+              <span className="font-satoshi text-sm text-black/50">
+                Showing {shownStart}-{shownEnd} of {filteredProducts.length} Products
+              </span>
+              <span className="text-black/50">Sort by:</span>
+              <select
+                value={sortBy}
+                onChange={(e) => {
+                  setSortBy(e.target.value);
+                  setCurrentPage(1);
+                }}
+                className="cursor-pointer bg-transparent font-medium outline-none"
+              >
+                <option value="popular">Most Popular</option>
+                <option value="rating">Rating</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+
+          {/* Mobile Sort */}
+          <div className="mb-5 flex items-center justify-end lg:hidden">
+            <select
+              value={sortBy}
+              onChange={(e) => {
+                setSortBy(e.target.value);
+                setCurrentPage(1);
+              }}
+              className="rounded-full bg-[#F0F0F0] px-4 py-2 text-xs outline-none"
+            >
+              <option value="popular">Most Popular</option>
+              <option value="rating">Rating</option>
+              <option value="price-low">Price Low</option>
+              <option value="price-high">Price High</option>
+            </select>
+          </div>
+
+          {/* Product Grid */}
+          {visibleProducts.length > 0 ? (
+            <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 md:gap-x-5 md:gap-y-10">
+              {visibleProducts.map((product: Product) => (
+                <ProductCard product={product} />
+              ))}
+            </div>
+          ) : (
+            <div className="flex min-h-[300px] items-center justify-center rounded-[20px] bg-[#F0EEED]">
+              <p className="font-satoshi text-black/50">No products found.</p>
+            </div>
+          )}
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              setCurrentPage={setCurrentPage}
+            />
+          )}
+        </section>
+      </div>
+    </main>
+  );
+}
+
+export default ProductListingPage;
+
+/* ----------------- Filter Sidebar ----------------- */
+
+interface FilterSidebarProps {
+  filtersOpen: boolean;
+  setFiltersOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  categories: string[];
+  pendingColors: string[];
+  pendingSizes: string[];
+  pendingDressStyle: string;
+  pendingPriceRange: { min: number; max: number };
+  setPendingPriceRange: React.Dispatch<
+    React.SetStateAction<{ min: number; max: number }>
+  >;
+  setPendingColors: React.Dispatch<React.SetStateAction<string[]>>;
+  setPendingSizes: React.Dispatch<React.SetStateAction<string[]>>;
+  setPendingDressStyle: React.Dispatch<React.SetStateAction<string>>;
+  onApply: () => void;
+  onClear: () => void;
+}
+
+function FilterSidebar({
+  filtersOpen,
+  setFiltersOpen,
+  categories,
+  pendingColors,
+  pendingSizes,
+  pendingDressStyle,
+  pendingPriceRange,
+  setPendingPriceRange,
+  setPendingColors,
+  setPendingSizes,
+  setPendingDressStyle,
+  onApply,
+  onClear,
+}: FilterSidebarProps) {
+  const colors = [
+    "#00C12B",
+    "#F50606",
+    "#F5DD00",
+    "#F57900",
+    "#00C2EE",
+    "#2F45FF",
+    "#7D00FF",
+    "#F000A8",
+    "#FFFFFF",
+    "#000000",
+  ];
+
+  const sizes = [
+    "XX-Small",
+    "X-Small",
+    "Small",
+    "Medium",
+    "Large",
+    "X-Large",
+    "XX-Large",
+    "3X-Large",
+    "4X-Large",
+  ];
+
+  const dressStyles = ["Casual", "Formal", "Party", "Gym"];
+
+  const toggleColor = (color: string) => {
+    setPendingColors((current) =>
+      current.includes(color)
+        ? current.filter((item) => item !== color)
+        : [...current, color]
+    );
+  };
+
+  const toggleSize = (size: string) => {
+    setPendingSizes((current) =>
+      current.includes(size)
+        ? current.filter((item) => item !== size)
+        : [...current, size]
+    );
+  };
+
+  const handleMinChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = Number(e.target.value);
+    setPendingPriceRange((current) => ({
+      ...current,
+      min: Math.min(value, current.max - 1),
+    }));
+  };
+
+  const handleMaxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = Number(e.target.value);
+    setPendingPriceRange((current) => ({
+      ...current,
+      max: Math.max(value, current.min + 1),
+    }));
+  };
+
+  // For visual slider bar
+  const leftPercent =
+    ((pendingPriceRange.min - MIN_PRICE) / (MAX_PRICE - MIN_PRICE)) * 100;
+  const rightPercent =
+    100 - ((pendingPriceRange.max - MIN_PRICE) / (MAX_PRICE - MIN_PRICE)) * 100;
+
+  return (
+    <div className="rounded-[20px] border border-black/10 bg-white p-4">
+      {/* Filter Heading */}
+      <div className="flex items-center justify-between">
+        <h2 className="font-satoshi text-base font-bold">Filters</h2>
+        <button
+          type="button"
+          onClick={() => setFiltersOpen(!filtersOpen)}
+          className="text-black/50"
+        >
+          <FaSliders size={15} />
+        </button>
+      </div>
+
+      {filtersOpen && (
+        <div className="mt-5">
+          {/* Categories */}
+          <FilterSection title="Categories">
+            {categories.map((item) => (
+              <Link
+                key={item}
+                to={`/category/${item.toLowerCase()}`}
+                className="flex items-center justify-between py-1.5 text-xs text-black/50 transition hover:text-black"
+              >
+                <span>{item}</span>
+                <span>›</span>
+              </Link>
+            ))}
+          </FilterSection>
+
+          {/* Price */}
+          <FilterSection title="Price">
+            <div className="px-1 pt-2">
+              <div className="relative h-1 rounded-full bg-black/10">
+                <div
+                  className="absolute h-1 rounded-full bg-black"
+                  style={{ left: `${leftPercent}%`, right: `${rightPercent}%` }}
+                />
+                <div
+                  className="absolute top-1/2 h-4 w-4 -translate-y-1/2 rounded-full border-2 border-white bg-black shadow"
+                  style={{ left: `${leftPercent}%` }}
+                />
+                <div
+                  className="absolute top-1/2 h-4 w-4 -translate-y-1/2 rounded-full border-2 border-white bg-black shadow"
+                  style={{ right: `${rightPercent}%` }}
+                />
+              </div>
+
+              <div className="mt-4 flex justify-between text-xs">
+                <span>${MIN_PRICE}</span>
+                <span>${MAX_PRICE}</span>
+              </div>
+            </div>
+
+            <div className="mt-4 grid grid-cols-2 gap-2">
+              <input
+                type="number"
+                value={pendingPriceRange.min}
+                onChange={handleMinChange}
+                className="w-full rounded-lg bg-[#F0F0F0] px-2 py-2 text-xs outline-none"
+              />
+              <input
+                type="number"
+                value={pendingPriceRange.max}
+                onChange={handleMaxChange}
+                className="w-full rounded-lg bg-[#F0F0F0] px-2 py-2 text-xs outline-none"
+              />
+            </div>
+          </FilterSection>
+
+          {/* Colors */}
+          <FilterSection title="Colors">
+            <div className="grid grid-cols-5 gap-3">
+              {colors.map((color) => {
+                const active = pendingColors.includes(color);
+                return (
+                  <button
+                    key={color}
+                    type="button"
+                    onClick={() => toggleColor(color)}
+                    aria-pressed={active}
+                    className={`h-7 w-7 rounded-full border ${color === "#FFFFFF" ? "border-black/20" : "border-transparent"
+                      } ${active ? "ring-2 ring-black ring-offset-2" : ""}`}
+                    style={{ backgroundColor: color }}
+                    aria-label={`Select color ${color}`}
+                  />
+                );
+              })}
+            </div>
+          </FilterSection>
+
+          {/* Size */}
+          <FilterSection title="Size">
+            <div className="flex flex-wrap gap-2">
+              {sizes.map((size) => {
+                const active = pendingSizes.includes(size);
+                return (
+                  <button
+                    key={size}
+                    type="button"
+                    onClick={() => toggleSize(size)}
+                    aria-pressed={active}
+                    className={`rounded-full px-3 py-2 text-[10px] transition ${active ? "bg-black text-white" : "bg-[#F0F0F0] text-black/50"
+                      }`}
+                  >
+                    {size}
+                  </button>
+                );
+              })}
+            </div>
+          </FilterSection>
+
+          {/* Dress Style */}
+          <FilterSection title="Dress Style">
+            {dressStyles.map((style) => (
+              <button
+                key={style}
+                type="button"
+                onClick={() =>
+                  setPendingDressStyle(pendingDressStyle === style ? "" : style)
+                }
+                className={`flex w-full items-center justify-between py-1.5 text-xs transition ${pendingDressStyle === style
+                  ? "font-medium text-black"
+                  : "text-black/50 hover:text-black"
+                  }`}
+              >
+                <span>{style}</span>
+                <span>›</span>
+              </button>
+            ))}
+          </FilterSection>
+
+          {/* Actions */}
+          <div className="mt-5 flex flex-col gap-2">
+            <button
+              type="button"
+              onClick={onApply}
+              className="h-10 w-full rounded-full bg-black text-xs font-medium text-white transition hover:bg-black/90"
+            >
+              Apply Filter
+            </button>
+
+            <button
+              type="button"
+              onClick={onClear}
+              className="h-10 w-full rounded-full border border-black/10 text-xs font-medium text-black transition hover:bg-black/5"
+            >
+              Clear All
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ----------------- Filter Section ----------------- */
+
+interface FilterSectionProps {
+  title: string;
+  children: React.ReactNode;
+}
+
+function FilterSection({ title, children }: FilterSectionProps) {
+  const [open, setOpen] = useState(true);
+
+  return (
+    <div className="border-t border-black/10 py-4 first:border-t-0">
+      <button
+        type="button"
+        onClick={() => setOpen(!open)}
+        className="mb-3 flex w-full items-center justify-between"
+      >
+        <span className="font-satoshi text-sm font-medium">{title}</span>
+        {open ? (
+          <FaChevronUp size={10} className="text-black/50" />
+        ) : (
+          <FaChevronDown size={10} className="text-black/50" />
+        )}
+      </button>
+      {open && children}
+    </div>
+  );
+}
+
+/* ----------------- Pagination ----------------- */
+
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
+}
+
+function Pagination({
+  currentPage,
+  totalPages,
+  setCurrentPage,
+}: PaginationProps) {
+  const pages = Array.from({ length: totalPages }, (_, index) => index + 1);
+
+  return (
+    <div className="mt-8 flex items-center justify-between border-t border-black/10 pt-4">
+      {/* Previous */}
+      <button
+        type="button"
+        disabled={currentPage === 1}
+        onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
+        className="flex items-center gap-2 rounded-lg border border-black/10 px-3 py-2 text-xs transition hover:bg-black hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
+      >
+        <span>←</span>
+        <span>Previous</span>
+      </button>
+
+      {/* Pages */}
+      <div className="hidden items-center gap-1 sm:flex">
+        {pages.map((page) => (
+          <button
+            key={page}
+            type="button"
+            onClick={() => setCurrentPage(page)}
+            aria-current={currentPage === page ? "page" : undefined}
+            className={`h-8 min-w-8 rounded-lg px-2 text-xs ${currentPage === page
+              ? "bg-[#F0F0F0] font-medium"
+              : "text-black/50 hover:text-black"
+              }`}
+          >
+            {page}
+          </button>
+        ))}
+      </div>
+
+      {/* Mobile Page */}
+      <span className="text-xs text-black/50 sm:hidden">
+        {currentPage} / {totalPages}
+      </span>
+
+      {/* Next */}
+      <button
+        type="button"
+        disabled={currentPage === totalPages}
+        onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
+        className="flex items-center gap-2 rounded-lg border border-black/10 px-3 py-2 text-xs transition hover:bg-black hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
+      >
+        <span>Next</span>
+        <span>→</span>
+      </button>
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+

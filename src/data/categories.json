@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "T-shirts",
+    "slug": "t-shirts",
+    "gender": "Men"
+  },
+  {
+    "id": 2,
+    "name": "Shirts",
+    "slug": "shirts",
+    "gender": "Men"
+  },
+  {
+    "id": 3,
+    "name": "Jeans",
+    "slug": "jeans",
+    "gender": "Men"
+  },
+  {
+    "id": 4,
+    "name": "Shorts",
+    "slug": "shorts",
+    "gender": "Men"
+  },
+  {
+    "id": 5,
+    "name": "Trousers",
+    "slug": "trousers",
+    "gender": "Men"
+  },
+  {
+    "id": 6,
+    "name": "Hoodies",
+    "slug": "hoodies",
+    "gender": "Men"
+  },
+  {
+    "id": 7,
+    "name": "Jackets",
+    "slug": "jackets",
+    "gender": "Men"
+  },
+  {
+    "id": 8,
+    "name": "Dresses",
+    "slug": "dresses",
+    "gender": "Women"
+  }
+]

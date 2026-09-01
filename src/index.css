@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/* Integral CF (Headers) */
+@font-face {
+  font-family: 'Integral CF';
+  src: url('./assets/fonts/integralcf-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Integral CF';
+  src: url('./assets/fonts/integralcf-extrabold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Satoshi (Body Text) */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/Satoshi-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #000000;
+    font-family: Satoshi, sans-serif;
+    font-size: 16px;
+
+  }
+
+  button,
+  input {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  h1,
+  h2 {
+    font-family: Integral CF;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 64px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+  }
+
+}
+
+@layer utilities {
+  .container-shop {
+    width: min(100% - 32px, 1280px);
+    margin-inline: auto;
+  }
+
+  .top-bar-logo {
+    font-family: Integral CF;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+  }
+
+  /* carousel css */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+
+  /* filter range */
+
+  input[type="range"]::-webkit-slider-thumb {
+    pointer-events: auto;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #000000;
+    border: 2px solid #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    pointer-events: auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #000000;
+    border: 2px solid #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+}
